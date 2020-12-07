@@ -24,7 +24,7 @@
                 <td><%= task.time %></td>
                 <td><%= task.updated_at.to_s(:datetime_jp) %></td>
                 <td>
-                    <%= link_to "確認", "#" %>
+                    <%= link_to "確認", task_path(:id) %>
                 </td>
                 <td>
                     <%= link_to "編集", "#" %>
