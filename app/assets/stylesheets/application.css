@@ -18,6 +18,7 @@
   padding: 0px; 
 }
 
+/* univarsal */
 header{
   background-color: crimson;
   color: white;
@@ -39,4 +40,23 @@ h2{
 
 .container{
   height: 1000px;
+}
+
+/* index.html */
+
+thead{
+  background-color: lightpink;
+}
+
+tbody{
+  background-color: lavenderblush;
+  text-align: center;
+}
+
+table{
+  width: 90%;
+  margin: 0px 40px 20px 10px;
+}
+th,td{
+  padding: 5px 8px;
 }
