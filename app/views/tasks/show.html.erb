@@ -27,10 +27,10 @@
         <li><%= link_to "スケジュール一覧に戻る", root_path %></li>
     </ul>
     <ul>
-        <li><%= link_to "スケジュールを編集する", "#" %></li>
+        <li><%= link_to "スケジュールを編集する", edit_task_path(@task.id)%></li>
     </ul>
     <ul>
-        <li><%= link_to "スケジュールを削除", "#" %></li>
+        <li><%= link_to "スケジュールを削除", task_path(@task.id), method: :delete, data:{ confirm: '本当によろしいですか？'} %></li>
     </ul>
 
 </div>

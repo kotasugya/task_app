@@ -22,13 +22,26 @@ class TasksController < ApplicationController
     end
   end
   
-  def edit 
+  def edit
+    @task = Task.find(params[:id])
   end
 
   def update
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      flash[:success] = "スケジュールを更新しました"
+      redirect_to(@task)
+    else
+      render "new"
+    end
   end
   
-  def delete 
+  def destroy
+    @task = Task.find(params:id)
+		@task.destroy
+		
+		flash[:success] = "スケジュールを削除しました"
+		redirect_to(tasks_path)
   end
 
 #for security from here

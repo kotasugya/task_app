@@ -1,6 +1,6 @@
 <h2>スケジュール一覧</h2>
 <div class = container>
-  <table>
+    <table>
     <thead>
         <tr>
             <th>id</th>
@@ -24,17 +24,17 @@
                 <td><%= task.time %></td>
                 <td><%= task.updated_at.to_s(:datetime_jp) %></td>
                 <td>
-                    <%= link_to "確認", task_path(:id) %>
+                    <%= link_to "確認", task_path(task.id) %>
                 </td>
                 <td>
-                    <%= link_to "編集", "#" %>
+                    <%= link_to "編集", edit_task_path(task.id)	 %>
                 </td>
                 <td>
-                    <%= link_to "削除", "#" %>
+                    <%= link_to "削除", task_path(task.id), method: :delete, data:{ confirm: '本当によろしいですか？'} %>
                 </td>
             </tr>
         <% end %>
     </tbody>
-  </table>
-  <%= link_to("スケジュール新規登録", new_task_path) %>
+    </table>
+    <%= link_to("スケジュール新規登録", new_task_path) %>
 </div>
