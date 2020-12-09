@@ -16,6 +16,7 @@
  * { 
   margin: 0px; 
   padding: 0px; 
+  
 }
 
 /* univarsal */
@@ -31,8 +32,8 @@ header{
 footer{
   background-color: crimson;
   color: white;
-  height: 150px;
-  line-height: 150px;
+  height: 100px;
+  line-height: 100px;
 }
 h2{
   margin: 40px 0px 20px 15px;
@@ -40,6 +41,15 @@ h2{
 
 .container{
   height: 1000px;
+}
+
+.alert-success{
+  margin: 20px;
+  background-color: honeydew;
+  border: 1px solid;
+  width: 230px;
+  text-align: center;
+  padding: 10px;
 }
 
 /* index.html */
