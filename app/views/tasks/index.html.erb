@@ -19,10 +19,10 @@
             <tr>
                 <td><%= task.id %></td>
                 <td><%= task.title %></td>
-                <td><%= task.start_day %></td>
-                <td><%= task.finish_day %></td>
+                <td><%= task.start_day.strftime('%Y/%m/%d') %></td>
+                <td><%= task.finish_day.strftime('%Y/%m/%d') %></td>
                 <td><%= task.time %></td>
-                <td><%= task.updated_at.to_s(:datetime_jp) %></td>
+                <td><%= task.updated_at.strftime('%Y/%m/%d %H:%M') %></td>
                 <td>
                     <%= link_to "確認", task_path(task.id) %>
                 </td>
@@ -37,5 +37,5 @@
     </tbody>
     </table>
     <%= link_to("スケジュール新規登録", new_task_path) %>
+    <h2>スケジュールの合計：<%= @tasks.count  %></h2>
 </div>
-<h2>スケジュールの合計：<%= @tasks.count  %></h2>
