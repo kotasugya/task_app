@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  start_day: 2020-12-07 08:16:57
+  finish_day: 2020-12-07 08:16:57
+  time: MyString
+  schedule_memo: MyString
+
+two:
+  title: MyString
+  start_day: 2020-12-07 08:16:57
+  finish_day: 2020-12-07 08:16:57
+  time: MyString
+  schedule_memo: MyString

@@ -1,0 +1,41 @@
+<h2>スケジュール一覧</h2>
+<div class = container>
+    <table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>タイトル</th>
+            <th>開始日</th>
+            <th>終了日</th>
+            <th>終日</th>
+            <th>スケジュール更新日時</th>
+            <th>確認</th>
+            <th>編集</th>
+            <th>削除</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @tasks.each do |task| %>
+            <tr>
+                <td><%= task.id %></td>
+                <td><%= task.title %></td>
+                <td><%= task.start_day.strftime('%Y/%m/%d') %></td>
+                <td><%= task.finish_day.strftime('%Y/%m/%d') %></td>
+                <td><%= task.time %></td>
+                <td><%= task.updated_at.strftime('%Y/%m/%d %H:%M') %></td>
+                <td>
+                    <%= link_to "確認", task_path(task.id) %>
+                </td>
+                <td>
+                    <%= link_to "編集", edit_task_path(task.id)	 %>
+                </td>
+                <td>
+                    <%= link_to "削除", task_path(task.id), method: :delete, data:{ confirm: '本当によろしいですか？'} %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+    </table>
+    <%= link_to("スケジュール新規登録", new_task_path) %>
+    <h2>スケジュールの合計：<%= @tasks.count  %></h2>
+</div>

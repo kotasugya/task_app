@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+ * { 
+  margin: 0px; 
+  padding: 0px; 
+  
+}
+
+/* univarsal */
+header{
+  background-color: crimson;
+  color: white;
+  height: 100px;
+  font-size: 15px;
+  line-height: 100px;
+  padding-left: 10px;
+}
+
+footer{
+  background-color: crimson;
+  color: white;
+  height: 100px;
+  line-height: 100px;
+}
+h2{
+  margin: 20px 20px ;
+}
+
+.container{
+  height: 1000px;
+}
+
+.alert-success{
+  margin: 20px;
+  background-color: honeydew;
+  border: 1px solid;
+  width: 230px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* index.html */
+
+thead{
+  background-color: lightpink;
+}
+
+tbody{
+  background-color: lavenderblush;
+  text-align: center;
+}
+
+table{
+  width: 90%;
+  margin: 0px 40px 20px 10px;
+}
+th,td{
+  padding: 5px 8px;
+}

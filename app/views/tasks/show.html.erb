@@ -1,0 +1,35 @@
+<h2>スケジュール詳細</h2>
+<table>
+    <tr>
+        <th>タイトル</th>
+        <td><%= @task.title %></td>
+    </tr>
+    <tr>
+        <th>開始日</th>
+        <td><%= @task.start_day %></td>
+    </tr>
+    <tr>
+        <th>投稿日時</th>
+        <td><%= @task.created_at.to_s(:datetime_jp) %></td>
+    </tr>
+    <tr>
+        <th>終日</th>
+        <td><%= @task.time %></td>
+    </tr>
+    <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @task.schedule_memo %></td>
+    </tr>
+</table>
+
+<div show-menu>
+    <ul>
+        <li><%= link_to "スケジュール一覧に戻る", root_path %></li>
+    </ul>
+    <ul>
+        <li><%= link_to "スケジュールを編集する", edit_task_path(@task.id)%></li>
+    </ul>
+    <ul>
+        <li><%= link_to "スケジュールを削除", task_path(@task.id), method: :delete, data:{ confirm: '本当によろしいですか？'} %></li>
+    </ul>
+</div>
